@@ -13,7 +13,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import Alert from '@mui/material/Alert';
+// import Alert from '@mui/material/Alert';
 import Serch from '../Search/Search';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 // import Sidebar from "../Sidebar/Sidebar"
@@ -51,13 +51,10 @@ const Navbar = () => {
   return (
     <React.Fragment>
     <AppBar>
-      <Alert style={{backgroundColor:"#10B981", color:"white" 
+      {/* <Alert style={{backgroundColor:"#10B981", color:"white" 
       , fontSize:"14px" }}> 
-      <div behavior="scroll" direction="left"  width="1400"> 
-      ✨Welcome to the Official Launch of DevHouse HQ⚡🎉 <span style={{color:"#8896A3"}}>|</span>  
-       </div>
-      
-      </Alert>
+     ✨Welcome to the Official Launch of DevHouse HQ⚡🎉    
+      </Alert> */}
       <Container maxWidth="false" className="bar">
         <Toolbar disableGutters>
           <Typography
