@@ -1,5 +1,6 @@
 import * as React from 'react';
 import "./Navbar.css";
+import { Link} from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import Box from '@mui/material/Box';
@@ -16,8 +17,9 @@ import MenuItem from '@mui/material/MenuItem';
 // import Alert from '@mui/material/Alert';
 import Serch from '../Search/Search';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
-// import Sidebar from "../Sidebar/Sidebar"
+import Sidebar from "../Sidebar/Sidebar"
 import Badge from '@mui/material/Badge';
+import logo from "./logo.png"
 
 
 // import Fab from '@mui/material/Fab';
@@ -57,17 +59,20 @@ const Navbar = () => {
       </Alert> */}
       <Container maxWidth="false" className="bar">
         <Toolbar disableGutters>
-          <Typography
+        <Link to="/" style={{color:"white",fontWeight:"bold", textDecoration:"none"}}> <Typography 
             variant="h6"
             noWrap
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-          >
-            LOGO 
-          </Typography>
+          > 
+       <img src={logo}  style={{height:"30px", width:"30px" }} alt='logo'/>&nbsp;devhouse 
+        
+          </Typography> 
+          </Link> 
 
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          {/* hambuger icon */}
+          <Box sx={{ flexGrow: -1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -76,39 +81,34 @@ const Navbar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon/>
             </IconButton>
-            {/* <Sidebar/> */}
-            
-      
-           
-         
           </Box>
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            sx={{ flexGrow: 8, display: { xs: 'flex', md: 'none'  } }}
           >
-            LOGO
+          
+          <img src={logo}  style={{height:"30px", width:"30px" }} alt='logo'/>&nbsp;devhouse
+       
+      
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+         
+
+
+          <Box sx={{ flexGrow: 2, display: { xs: 'none', md: 'flex' } }}>
+          
+        {/* <Button sx={{ my: 2, color: 'white', display: 'block' }}> Explore</Button>
+        <Button sx={{ my: 2, color: 'white', display: 'block' }}> Official Blog</Button> */}
           </Box>
  
         
         
 
- 
-          <Box  sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }} style={{paddingRight:"12px"}}>
+          {/* Search Component */}
+          <Box  sx={{ flexGrow: 2.5, display: { xs: 'none', md: 'flex' } }} style={{paddingRight:"12px"}}>
          <Serch />
          </Box>
  
@@ -217,11 +217,7 @@ const Navbar = () => {
       </Container>
    
     </AppBar>
-       <br />
-       <br />
-       <br />
-       <br />
-       <br />
+      
        </React.Fragment>
   );
 };

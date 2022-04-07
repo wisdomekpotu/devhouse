@@ -40,7 +40,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('md')]: {
-      width: '20ch',
+      width: '70ch',
     },
   },
 }))
@@ -49,12 +49,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function Serch() {
   return (
     <div>
-      <Search>
+      <Search >
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder="Search for tags, articles, and many more"
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
