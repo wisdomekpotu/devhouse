@@ -16,7 +16,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Alert from '@mui/material/Alert';
 import Serch from '../Search/Search';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
-import Sidebar from "../Sidebar/Sidebar"
+// import Sidebar from "../Sidebar/Sidebar"
 import Badge from '@mui/material/Badge';
 
 
@@ -27,10 +27,10 @@ import ProfilePopover from '../ProfilePopover/ProfilePopover';
 import NotifyPopover from  '../NotifyPopover/NotifyPopover';
 
 const pages = ['Articles', 'Communities', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Navbar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -53,13 +53,9 @@ const Navbar = () => {
     <AppBar>
       <Alert style={{backgroundColor:"#10B981", color:"white" 
       , fontSize:"14px" }}> 
-      <marquee behavior="scroll" direction="left"  width="1400"> 
-      ✨Welcome to the Official Launch of DevHouse HQ⚡🎉 <span style={{color:"#8896A3"}}>|</span> ✨Welcome to the Official Launch of DevHouse HQ⚡🎉 <span style={{color:"#8896A3"}}>|</span>  ✨Welcome to the Official Launch of DevHouse HQ⚡🎉 <span style={{color:"#8896A3"}}>|</span>
-      ✨Welcome to the Official Launch of DevHouse HQ⚡🎉 <span style={{color:"#8896A3"}}>|</span> 
-      ✨Welcome to the Official Launch of DevHouse HQ⚡🎉 <span style={{color:"#8896A3"}}>|</span> 
-      ✨Welcome to the Official Launch of DevHouse HQ⚡🎉 <span style={{color:"#8896A3"}}>|</span> 
+      <div behavior="scroll" direction="left"  width="1400"> 
       ✨Welcome to the Official Launch of DevHouse HQ⚡🎉 <span style={{color:"#8896A3"}}>|</span>  
-       </marquee>
+       </div>
       
       </Alert>
       <Container maxWidth="false" className="bar">
