@@ -11,13 +11,13 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 // import Alert from '@mui/material/Alert';
 import Serch from '../Search/Search';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
-import Sidebar from "../Sidebar/Sidebar"
+// import Sidebar from "../Sidebar/Sidebar"
 import Badge from '@mui/material/Badge';
 import logo from "./logo.png"
 
@@ -28,7 +28,7 @@ import logo from "./logo.png"
 import ProfilePopover from '../ProfilePopover/ProfilePopover';
 import NotifyPopover from  '../NotifyPopover/NotifyPopover';
 
-const pages = ['Articles', 'Communities', 'Blog'];
+// const pages = ['Articles', 'Communities', 'Blog'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Navbar = () => {
@@ -42,9 +42,9 @@ const Navbar = () => {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+  // const handleCloseNavMenu = () => {
+  //   setAnchorElNav(null);
+  // };
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
