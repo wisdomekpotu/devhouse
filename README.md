@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/discord/810571477316403233?style=for-the-badge" alt="discord - users online" />
   </a>
   <a href="https://devhouse.live">
-    <img src="https://img.shields.io/endpoint?color=FD4D4D&style=for-the-badge&url=https%3A%2F%2Fapi.dogegarden.net%2Fv1%2Fshields" alt="dogehouse - users online" />
+    <img src="https://img.shields.io/endpoint?color=FD4D4D&style=for-the-badge&url=https%3A%2F%2Fapi.dogegarden.net%2Fv1%2Fshields" alt="devhouse" - users online" />
   </a>
 </p>
 
@@ -45,8 +45,21 @@ Please read [CONTRIBUTING.md](https://github.com/wisdomekpotu/devhouse/blob/main
 
 ## Code of Conduct
 
-Please read [CODE_OF_CONDUCT.md](https://github.com/wisdomekpotu/devhouse/blob/main/CODE_OF_CONDUCT.md) for details on our code of conduct.
+Please read [CODE_OF_CONDUCT.md](https://ithub.com/wisdomekpotu/devhouse/blob/main/CODE_OF_CONDUCT.md) for details on our code of conduct.
 
 ## How to run locally
 
 Check <a href="https://github.com/wisdomekpotu/devhouse/blob/main/CONTRIBUTING.md#quickstart-local-frontend-development">here</a> on how to run locally</a>
+
+## 🐛 Bug Reporting
+
+Feel free to [open an issue](https://github.com/wisdomekpotu/devhouse/issues) on GitHub if you find any bug.
+
+## ⭐ Feature Request
+
+- Feel free to [Open an issue](https://github.com/wisdomekpotu/devhouse/issues) on GitHub to request any additional features you might need for your use case.
+
+## 📜 License
+
+This software is open source, licensed under the [MIT License](https://github.com/wisdomekpotu/devhouse/blob/main/LICENSE).
+
