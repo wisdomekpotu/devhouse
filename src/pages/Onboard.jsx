@@ -22,7 +22,7 @@ export default function Onboard() {
               spacing={2}
               justifyContent="center"
             >
-             <Button onClick={signInWithGoogle} variant="outlined" style={{color:"white" , borderRadius:"13px", textAlign:"center"}}><span><img src="" alt="" /></span> Continue with Google</Button>    
+             <Button onClick={signInWithGoogle} variant="outlined" style={{color:"grey" , borderRadius:"13px", textAlign:"center"}}><span><img src="" alt="" /></span> Continue with Google</Button>    
               
              <Button href="/explore"  variant="outlined" style={{color:"white", borderRadius:"13px",textAlign:"center"}}>Continue with Github</Button>  
              <Button href="/onboard" variant="outlined"  style={{color:"white", textAlign:"center",borderRadius:"13px"}}> Continue with LinkedIn</Button>    
