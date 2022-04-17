@@ -6,7 +6,7 @@ export const signInWithGoogle = () => {
   const provider = new GoogleAuthProvider();
   signInWithPopup(auth, provider)
     .then((result) => {
-      //hamdle sign in state
+      //handle sign in state
       console.log(result)
     }).catch((error) => {
       console.log(error)
