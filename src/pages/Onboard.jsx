@@ -4,6 +4,7 @@ import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Button from "@mui/material/Button";
+import { signInWithGoogle } from '../firebase/signInWithGoogle';
 
 
 export default function Onboard() {
@@ -15,25 +16,27 @@ export default function Onboard() {
           Signin to Your Account
          </Typography>
          <Stack
-              sx={{ pt: 4 }}
-              direction="row"
+              sx={{ pt: 6 }}
+              
+              direction="column"
               spacing={2}
               justifyContent="center"
             >
-             <Button href="/onboard" variant="outlined" style={{color:"white" , borderRadius:"13px", textAlign:"center"}}> Continue with Google</Button>    
+             <Button onClick={signInWithGoogle} variant="outlined" style={{color:"white" , borderRadius:"13px", textAlign:"center"}}><span><img src="" alt="" /></span> Continue with Google</Button>    
               
              <Button href="/explore"  variant="outlined" style={{color:"white", borderRadius:"13px",textAlign:"center"}}>Continue with Github</Button>  
+             <Button href="/onboard" variant="outlined"  style={{color:"white", textAlign:"center",borderRadius:"13px"}}> Continue with LinkedIn</Button>    
+              
+              <Button href="/explore"  variant="outlined" style={{color:"white", borderRadius:"13px" ,textAlign:"center"}}>Continue with Facebook</Button> 
             </Stack>
-            <Stack
+            {/* <Stack
               sx={{ pt: 4 }}
               direction="row"
               spacing={2}
               justifyContent="center"
-            >
-             <Button href="/onboard" variant="outlined"  style={{color:"white", textAlign:"center",borderRadius:"13px"}}> Continue with LinkedIn</Button>    
-              
-             <Button href="/explore"  variant="outlined" style={{color:"white", borderRadius:"13px" ,textAlign:"center"}}>Continue with Facebook</Button>  
-            </Stack>
+            > */}
+        
+            {/* </Stack> */}
     </Container>
   </Box>
 </Fragment>
