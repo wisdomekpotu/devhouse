@@ -29,25 +29,27 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 export default function card() {
 
   return (
-    <Card sx={{ maxWidth: "xl" }} >
+    <Card  style={{backgroundColor:"#05152E",  color:"white" ,}}>
        <CardMedia
         component="img"
-        height="194"
-        image="https://media.giphy.com/media/kKo2x2QSWMNfW/giphy.gif"
+        height="174"
+        
+       
+        image="https://blog.openreplay.com/static/81f1bd1e9f170b06505967315e5dc3c7/99fbb/hero.webp"
         alt="Paella dish"
       />
        
-      <CardContent>
-      <Typography gutterBottom variant="h5" component="div">
-      How to use custom fonts in Tailwind CSS
+      <CardContent style={{color:"white"}} >
+      <Typography gutterBottom component="div" color="white" fontSize="20px">
+      Building a Progressive Web App with React 18
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        {/* <Typography variant="body2"  color="">
           This impressive paella is a perfect party dish and a fun meal to cook
           together with your guests...
       
-        </Typography>
+        </Typography> */}
       </CardContent>
-      <CardHeader
+      <CardHeader style={{color:"#9CA3AF", fontWeight:"bold", }}
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
             R
@@ -55,7 +57,7 @@ export default function card() {
         }
         action={
           <IconButton >
-            <FavoriteIcon /> 
+            <FavoriteIcon style={{color:"aqua"}}/> 
             <ShareIcon />
              <MoreVertIcon />
           </IconButton>
@@ -63,7 +65,9 @@ export default function card() {
        
 
         }
-        title="Shrimp and Chorizo Paella"
+
+     
+        title="wisdom ekpotu"
         subheader="September 14, 2016"
       />
      

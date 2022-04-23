@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-// import { getFirestore } from 'firebase/firestore';
+import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 
 //Firebase configuration Variable
@@ -15,21 +15,6 @@ const firebaseConfig = {
 
 //Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// //Store Users in database
-// export createUserProfileDocument = async () => {
-
-// }
-
-
-
-
-
-
-
-
-
-
-
 export const auth = getAuth(app);
-
+export const db = getFirestore(app)
+export default app;

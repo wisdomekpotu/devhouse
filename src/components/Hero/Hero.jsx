@@ -26,6 +26,7 @@ export default function Hero() {
               variant="h2"
               align="center"
               color="aqua"
+              
              
               fontSize= "83px"
               fontWeight= "bold"

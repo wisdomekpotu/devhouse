@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import "./Navbar.css";
 import { Link} from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
@@ -31,7 +31,27 @@ import NotifyPopover from  '../NotifyPopover/NotifyPopover';
 // const pages = ['Articles', 'Communities', 'Blog'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
+
+import { useUserAuth } from '../../context/UserAuthContext'
+
+
+
+
+
 const Navbar = () => {
+
+
+const {user} = useUserAuth()
+
+
+
+
+
+
+
+
+
+
   const [setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -183,7 +203,8 @@ const Navbar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Profile">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" />
+                {user ?  <Avatar alt="Remy Sharp" src={user.photoURL} /> : <Avatar alt="Remy Sharp" src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" /> }
+            
               </IconButton>
             </Tooltip>
             <Menu

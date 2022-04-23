@@ -1,19 +1,31 @@
-import React, { Fragment } from 'react'
-import Card from "../components/Card/Card"
-import { Stack } from '@mui/material';
+import * as React from 'react';
+import { experimentalStyled as styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import Card  from '../components/Card/Card';
+import Navbar from "../components/Navbar/Navbar"
 
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(2),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 
-function Feed() {
+export default function ResponsiveGrid() {
   return (
-    <Fragment>
-    <div>Feed</div>
-    <Stack spacing={2}  direction="row"  >
-        <Card/>
-        <Card/>
-        <Card/>
-    </Stack>
-    </Fragment>
-  )
+    <Box sx={{ flexGrow: 1 }} style={{marginTop:"24%"}}>
+      <Navbar/>
+      <h1>feed</h1>
+      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+        {Array.from(Array(6)).map((_, index) => (
+          <Grid item xs={4} sm={4} md={4} key={index}>
+            <Card>xs=2</Card>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
+  );
 }
-
-export default Feed

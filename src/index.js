@@ -6,12 +6,14 @@ import {
   BrowserRouter
 } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import { UserAuthContextProvider } from "./context/UserAuthContext"
 
 ReactDOM.render(
-
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <UserAuthContextProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </UserAuthContextProvider>,
   document.getElementById('root')
 );
 
