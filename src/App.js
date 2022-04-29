@@ -6,14 +6,11 @@ import Onboard from "./pages/Onboard"
 import Feed from "./pages/Feed"
 import Dashboard from "./pages/Dashboard"
 import ProtectedRoute from './Protect/ProtectedRoute';
-import ProtectLogin from './Protect/ProtectLogin';
 import Sidebar from "./components/Sidebar/Sidebar"
 import Tos from "./pages/Tos"
 
 
-
 function App() {
-
   return (
     <div>
       <Routes>

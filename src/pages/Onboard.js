@@ -85,7 +85,7 @@ e.preventDefault()
             {/* </Stack> */}
            
          <Typography  fontSize={14} marginTop={8} color="white" align='center'>
-         By signing in to Netlify, you agree to our 
+         By signing in to Devhouse, you agree to our 
          &nbsp;
          <Link to="/legal/terms-of-service-agreement" style={{color:"aqua"}}>terms of service.</Link>
          </Typography> 

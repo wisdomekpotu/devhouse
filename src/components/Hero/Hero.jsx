@@ -19,7 +19,7 @@ export default function Hero() {
             pt: 8,
             pb: 6,
           }}
-          marginTop="50px"
+          marginTop="90px"
         >
           <Container maxWidth="xl" >
             <Typography 
@@ -29,24 +29,24 @@ export default function Hero() {
               color="aqua"
               className='devhouse'
              
-              fontSize= "58px"
-              fontWeight= "bold"
+              fontSize= "64px"
+              fontWeight= "680"
               gutterBottom
             >
-              <span style={{color:"white"}}>Where <span style={{color:"aqua"}}>Global</span>  Tech <br /> Conversations  Begins</span>
+              <span style={{color:"white"}}>Where <span style={{color:"aqua"}}>Global</span>  Tech <br /> Conversations  Begin</span>
             </Typography>
-            <Typography fontSize="17px" align="left" color="white" paragraph>
+            <Typography fontSize="23px" align="left" color="white" paragraph>
             Taking Developer Conversations To The Moon🚀
             </Typography>
 
-            <Typography fontSize="13px" align="left" color="#8896A3" style={{fontSize:"16px"}}> Built for Techies to connect, build communities and find new opportunities. </Typography>
+            <Typography fontSize="23px" align="left" color="#8896A3" style={{fontSize:"16px"}}> Built for Techies to connect, build communities and find new opportunities. </Typography>
             <Stack
               sx={{ pt: 4 }}
               direction="row"
               spacing={2}
               justifyContent="left"
             >
-             <Button href="/onboard" variant="outlined" style={{color:"black" ,backgroundColor:"aqua", textAlign:"left"}}> Get Started - it's free⚡</Button>    
+             <Button href="/onboard" variant="outlined" style={{color:"black" ,backgroundColor:"aqua", textAlign:"left", fontWeight:"bold"}}> Join the Community - it's free⚡</Button>    
               
            
             </Stack>

@@ -32,45 +32,41 @@ export default function card() {
 
   return (
     <Stack className='feature' direction={{ xs: 'column', sm: 'row' }}
-    spacing={{ xs: 1, sm: 2, md: 4 }}>
-        <Button sx={{ maxWidth: "xl" }}  >
-      <CardContent>
-      <Typography gutterBottom variant="h6" component="div" align='left' color="#CCD6F6">
-    1.  Blog on your domain
-        </Typography>
-        <Typography fontSize="13px" color="#8896A3" align='left'>
+    spacing={{ xs: 1, sm: 2, md: 4 }}  marginTop="80px"  marginLeft="40px" marginRight="40px">
+       
+      <Typography gutterBottom variant="h6" component="div"  color="white">
+    1.  Discover New Opportunities<Typography fontSize="13px" color="#8896A3" align='left'>
           
         Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,conse
       
         </Typography>
-      </CardContent>
-    </Button>
-       <Button sx={{ maxWidth: "xl" }}   backgroundColor="#132F4C">
-     
-       <CardContent>
-       <Typography gutterBottom variant="h6" component="div"  align='left'  color="#CCD6F6">
-     2.  Instantly find  your  audience
-         </Typography>
-         <Typography fontSize="13px" color="#8896A3" align="left">
+        </Typography>
         
-         Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,conse
-       
+   
+   
+
+       <Typography gutterBottom variant="h6" component="div"   color="white">
+     2.  Share Your Knowledge/Experience
+
+     <Typography fontSize="13px" color="#8896A3" align="left">
+        
+        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,conse
+      
+        </Typography>
          </Typography>
-       </CardContent>
-     </Button>
-        <Button sx={{ maxWidth: "xl" }}  >
-        <CardContent>
-        <Typography gutterBottom variant="h6" component="div"  align='left' color="#CCD6F6">
-        3. No annoying 
-       ads/pop-ups
-          </Typography>
-          <Typography fontSize="13px" color="#8896A3" align='left'>
+       
+        
+   
+        <Typography gutterBottom variant="h6" component="div"   color="white">
+3. Grow Your Professional Network
+
+<Typography fontSize="13px" color="#8896A3" align='left'>
          
           Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,conse
           </Typography>
-        </CardContent>
-      </Button>
-     
+          </Typography>
+         
+    
     
  </Stack>
 

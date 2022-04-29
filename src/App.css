@@ -2,5 +2,8 @@
 
 body {
   background-color: #05152E;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Pacaembu, sans-serif';
+  max-width: 1250px;
+
+  margin: auto;
 }
