@@ -35,11 +35,12 @@ export default function card() {
     spacing={{ xs: 1, sm: 2, md: 4 }}>
         <Button sx={{ maxWidth: "xl" }}  >
       <CardContent>
-      <Typography gutterBottom variant="h5" component="div" align='left' color="#CCD6F6">
-      Blog on your <br /> personal domain
+      <Typography gutterBottom variant="h6" component="div" align='left' color="#CCD6F6">
+    1.  Blog on your domain
         </Typography>
-        <Typography variant="body2" color="#8896A3" align='left'>
-        Map your custom domain in just seconds. Serve your blog over HTTPS with no extra configuration. Get a high performance, secure, and fully-optimized dev blog that delights your readers.
+        <Typography fontSize="13px" color="#8896A3" align='left'>
+          
+        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,conse
       
         </Typography>
       </CardContent>
@@ -47,24 +48,25 @@ export default function card() {
        <Button sx={{ maxWidth: "xl" }}   backgroundColor="#132F4C">
      
        <CardContent>
-       <Typography gutterBottom variant="h5" component="div"  align='left'  color="#CCD6F6">
-       Instantly find  your <br /> audience
+       <Typography gutterBottom variant="h6" component="div"  align='left'  color="#CCD6F6">
+     2.  Instantly find  your  audience
          </Typography>
-         <Typography variant="body2" color="#8896A3" align='left'>
-         Every time you write an article, Hashnode publishes it on your domain and shares it with the dev community members on the homepage. The readers are directed to your website to read and interact
+         <Typography fontSize="13px" color="#8896A3" align="left">
+        
+         Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,conse
        
          </Typography>
        </CardContent>
      </Button>
         <Button sx={{ maxWidth: "xl" }}  >
         <CardContent>
-        <Typography gutterBottom variant="h5" component="div" align='left' color="#CCD6F6">
-        No annoying <br />
+        <Typography gutterBottom variant="h6" component="div"  align='left' color="#CCD6F6">
+        3. No annoying 
        ads/pop-ups
           </Typography>
-          <Typography variant="body2" color="#8896A3" align='left'>
-          Knowledge sharing on Hashnode is and will always be completely free. Because we value the relationship between you and your readers, we won't show ads or pop-ups on your articles.
-        
+          <Typography fontSize="13px" color="#8896A3" align='left'>
+         
+          Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,conse
           </Typography>
         </CardContent>
       </Button>

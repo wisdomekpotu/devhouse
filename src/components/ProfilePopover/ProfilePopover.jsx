@@ -30,16 +30,14 @@ export default function ProfilePopover() {
   return (
     <Box >
         {user ? 
-        <Container maxWidth="xl" >
+        <Container maxWidth="xl"   style={{ backgroundColor: 'transparent' }} >
         <IconButton sx={{ p: 0 }} >
         <Avatar alt="Remy Sharp" sx={{ width: 50, height: 50 }} src={user.photoURL}/>
-        <Typography textAlign="center" fontWeight= "bold" fontSize={14}> &nbsp;&nbsp; <span>{user.displayName} </span></Typography>
-        
+        <Typography textAlign="center" fontWeight= "bold" fontSize={14}> &nbsp;&nbsp; <span>{user.displayName} </span></Typography>     
         </IconButton>
           <br />
-          <br />
-   
-        <Stack sx={{ pt: 4 }} direction="row"spacing={2}> 
+        <Stack sx={{ pt: 4 }} direction="column"spacing={2}> 
+        <span style={{}}>water</span>
         <Button onClick={handleGoogleLogOut} variant="outlined" style={{color:"#05152E", textAlign:"center"}}>Logout</Button>
         </Stack> 
         </Container>
