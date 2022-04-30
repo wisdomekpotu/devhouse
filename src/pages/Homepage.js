@@ -7,6 +7,7 @@ import { Stack, Typography } from '@mui/material';
 import Footer from '../components/Footer/Footer';
 import EventCard from '../components/EventCard/EventCard';
 import FeaturedArticles from '../components/FeaturedArticles/FeaturedArticles';
+import Testimonials from '../components/Testimonials/Testimonials';
 
 export default function Homepage() {
   return (
@@ -33,12 +34,8 @@ export default function Homepage() {
         </Typography>
 
       </Stack>
-      <Stack direction={{ xs: 'column', sm: "row" }}
-        spacing={{ xs: 1, sm: 2, md: 4 }} style={{ justifyContent: "center", marginTop: "30px" }}>
-        <EventCard />
-        <EventCard />
-        <EventCard />
-      </Stack>
+
+      <EventCard />
       <Stack direction={{ xs: 'column' }}
         spacing={{ xs: 1, sm: 2, md: 4 }} style={{ justifyContent: "center", marginTop: "10%" }}>
         <Typography fontSize="13px" color="aqua" align='center'>
