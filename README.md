@@ -19,7 +19,7 @@
   <span> · </span>
   <a href="">Community</a>
   <span> · </span>
-  <a href="https://github.com/FotieMConstant/dogehouse-docs">Documentation</a>
+<!--   <a href="https://github.com/FotieMConstant/dogehouse-docs">Documentation</a> -->
 </h3>
 
 ---
