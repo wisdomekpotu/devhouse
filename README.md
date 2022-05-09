@@ -6,12 +6,12 @@
   <strong>Taking Developer conversations to the moon 🚀</strong>
 </p>
 <p align="center">
-  <a href="">
+<!--   <a href="">
     <img src="https://img.shields.io/discord/810571477316403233?style=for-the-badge" alt="discord - users online" />
   </a>
   <a href="https://devhouse.live">
     <img src="https://img.shields.io/endpoint?color=FD4D4D&style=for-the-badge&url=https%3A%2F%2Fapi.dogegarden.net%2Fv1%2Fshields" alt="devhouse" - users online" />
-  </a>
+  </a> -->
 </p>
 
 <h3 align="center">
