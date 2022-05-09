@@ -26,11 +26,7 @@
 
 ## Structure
 
-| Codebase         |   Description    |
-| :--------------- | :--------------: |
-| [kousa](kousa)   | Nodejs Rest API  |
-| [pilaf](pilaf)   | React Native App |
-| [kibbeh](kibbeh) |   CRA Frontend   |
+
 
 ## Branches
 
