@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, GithubAuthProvider, TwitterAuthProvider, FacebookAuthProvider } from "firebase/auth";
 import { auth } from "../firebase/firebase.utils";
 
 const userAuthContext = createContext();
@@ -15,6 +15,21 @@ export function UserAuthContextProvider({ children }) {
     const googleAuthProvider = new GoogleAuthProvider();
     return signInWithPopup(auth, googleAuthProvider);
   }
+
+  function githubSignIn() {
+    const githubAuthProvider = new GithubAuthProvider();
+    return signInWithPopup(auth, githubAuthProvider);
+  }
+
+  function twitterSignIn() {
+    const twitterAuthProvider = new TwitterAuthProvider();
+    return signInWithPopup(auth, twitterAuthProvider);
+  }
+  function facebookSignIn() {
+    const facebookAuthProvider = new FacebookAuthProvider();
+    return signInWithPopup(auth, facebookAuthProvider);
+  }
+
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
@@ -32,7 +47,7 @@ export function UserAuthContextProvider({ children }) {
   //will be accessible in application 
   return (
     <userAuthContext.Provider
-      value={{ user, logOut, googleSignIn }}
+      value={{ user, logOut, googleSignIn, githubSignIn, twitterSignIn, facebookSignIn }}
     >
       {children}
     </userAuthContext.Provider>

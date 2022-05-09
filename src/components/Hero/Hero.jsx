@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 // import { Link } from "react-router-dom";
-
+import { CardMedia } from '@mui/material';
 
 export default function Hero() {
   return (
@@ -50,6 +50,8 @@ export default function Hero() {
               
            
             </Stack>
+
+          
           </Container>
         </Box>
  </React.Fragment>

@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
 import Button from "@mui/material/Button";
 import { Stack } from '@mui/material';
+import {Link}  from "react-router-dom"
 
 import {useUserAuth} from "../../context/UserAuthContext"
 import { useNavigate } from "react-router-dom";
@@ -37,7 +38,8 @@ export default function ProfilePopover() {
         </IconButton>
           <br />
         <Stack sx={{ pt: 4 }} direction="column"spacing={2}> 
-        <span style={{}}>water</span>
+        <Link to="/dashboard"  variant="outlined" style={{color:"#05152E", textAlign:"center"}}>  Dashboard</Link>
+
         <Button onClick={handleGoogleLogOut} variant="outlined" style={{color:"#05152E", textAlign:"center"}}>Logout</Button>
         </Stack> 
         </Container>
