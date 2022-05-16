@@ -1,10 +1,9 @@
 <a href="https://devhouse.live"><p align="center">
-<img height=100 src=""/>
+![home](/assets/homescreen.png)
 
 </p></a>
 <p align="center">
-<strong>Open Source blogging platform for developers<strong/> <br>
- 
+
 </p>
 <p align="center">
 <!--   <a href="">
