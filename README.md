@@ -44,7 +44,7 @@
 - User Personal Dashboards
 
 ### Coming Soon (in progress)
-- Editor with Markdown Support (Coming Soon!)
+- Editor with Markdown Support 
 - Comments (github discussions)
 - Likes Feature
 
