@@ -12,7 +12,7 @@ export default function Article() {
     onSnapshot(docRef, (snapshot) => {
       setArticle({ ...snapshot.data(), id: snapshot.id });
     });
-  }, []);
+  }, [id]);
 
 
 
