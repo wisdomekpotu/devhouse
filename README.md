@@ -1,5 +1,5 @@
 <a href="https://devhouse.live"><p align="center">
-![home](/assets/homescreen.png)
+![home](/screenshots/homescreen.png)
 
 </p></a>
 <p align="center">
