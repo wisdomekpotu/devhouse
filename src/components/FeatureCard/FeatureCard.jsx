@@ -8,13 +8,13 @@ export default function card() {
 
   return (
     <Stack className='feature' direction={{ xs: 'column', sm: 'row' }}
-    spacing={{ xs: 1, sm: 2, md: 4 }}  marginTop="80px"  marginLeft="40px" marginRight="40px">
+    spacing={{ xs: 1, sm: 2, md: 4 }}  marginTop="45px"  marginLeft="40px" marginRight="40px">
        
       <Typography gutterBottom variant="h6" component="div"  color="white"  backgroundColor="#001E3C" height="70px" border= '2px solid #132F4C' borderRadius= '16px' padding="20px"   >
-    1.  Discover New Opportunities<Typography fontSize="13px" color="#8896A3" align='left'>
-          
-        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,conse
-      
+      Instantly find your audience
+      <Typography fontSize="13px" color="#8896A3" align='left'>
+      Devhouse publishes your articles and distributes them to the dev community through the feedpage.
+   
         </Typography>
         </Typography>       
    
@@ -22,22 +22,21 @@ export default function card() {
 
        <Typography gutterBottom variant="h6" component="div"   color="white" backgroundColor="#001E3C" height="70px" border= '2px solid #132F4C' borderRadius= '16px' padding="20px"   
   >
-     2.  Share Your Knowledge
+    No annoying ads/pop-ups
      <Typography fontSize="13px" color="#8896A3" align="left">
         
-        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,conse
-      
+     Devhouse is and always will be a free platform for knowledge sharing.
         </Typography>
          </Typography>
        
         
    
         <Typography gutterBottom variant="h6" component="div"   color="white"  backgroundColor="#001E3C" height="70px" border= '2px solid #132F4C' borderRadius= '16px' padding="20px"   >
-3. Grow Your Professional Network
-
+        Write in Markdown
 <Typography fontSize="13px" color="#8896A3" align='left'>
          
-          Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,conse
+
+Write your content in a distraction-free Markdown editor with proper syntax highlighting and see live previews instantly
           </Typography>
           </Typography>
          

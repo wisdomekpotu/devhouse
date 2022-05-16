@@ -1,11 +1,15 @@
-// import React from 'react'
-// import { useUserAuth } from '../context/UserAuthContext'
-// import { Navigate } from 'react-router-dom'
+//import React from 'react'
+import { useUserAuth } from '../context/UserAuthContext'
+import { Navigate } from 'react-router-dom'
 
-// export default function ProtectLogin({ children }) {
+export default function RestrictPage({ children }) {
 
-//   let { user } = useUserAuth()
+  let { user } = useUserAuth()
 
-//   return user === true ? <Navigate to="/dashboard" replace /> : children;
+  if (!user) {
+    return children
+  } else {
+    return <Navigate to="/" />
+  }
+};
 
-// };

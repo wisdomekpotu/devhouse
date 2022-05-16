@@ -1,31 +1,20 @@
-import React from 'react';
-import './Hero.css';
+import React, {Fragment} from 'react';
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Typography from '@mui/material/Typography';
-// import Grid from "@mui/material/Grid"
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-// import { Link } from "react-router-dom";
-import { CardMedia } from '@mui/material';
 
 export default function Hero() {
   return (
-<React.Fragment >
+<Fragment>
 
-<Box className= "hero"
-          sx={{
-            
-            pt: 8,
-            pb: 6,
-          }}
-          marginTop="90px"
-        >
+<Box sx={{  pt: 8, pb: 6,}} marginTop="50px">
           <Container maxWidth="xl" >
             <Typography 
               component="h1"
               variant="h2"
-              align="left"
+              align="center"
               color="aqua"
               className='devhouse'
              
@@ -33,20 +22,17 @@ export default function Hero() {
               fontWeight= "680"
               gutterBottom
             >
-              <span style={{color:"white"}}>Where <span style={{color:"aqua"}}>Global</span>  Tech <br /> Conversations  Begin</span>
+              <span style={{color:"white"}}>The Open <span style={{color:"aqua"}}>Source</span>  Blogging<br/> Platform  for Developers </span>
             </Typography>
-            <Typography fontSize="23px" align="left" color="white" paragraph>
-            Taking Developer Conversations To The Moon🚀
-            </Typography>
-
-            <Typography fontSize="23px" align="left" color="#8896A3" style={{fontSize:"16px"}}> Built for Techies to connect, build communities and find new opportunities. </Typography>
+   
+            <Typography fontSize="23px" align="center" color="#8896A3" style={{fontSize:"16px"}}>   Taking Developer Conversations To The Moon🚀 </Typography>
             <Stack
               sx={{ pt: 4 }}
               direction="row"
               spacing={2}
-              justifyContent="left"
+              justifyContent="center"
             >
-             <Button href="/onboard" variant="outlined" style={{color:"black" ,backgroundColor:"aqua", textAlign:"left", fontWeight:"bold"}}> Join the Community - it's free⚡</Button>    
+             <Button href="/onboard" variant="outlined" style={{color:"black" ,backgroundColor:"aqua", textAlign:"center", fontWeight:"bold"}}> Join the Community - it's free⚡</Button>    
               
            
             </Stack>
@@ -54,7 +40,7 @@ export default function Hero() {
           
           </Container>
         </Box>
- </React.Fragment>
+ </Fragment>
     
   )
 }

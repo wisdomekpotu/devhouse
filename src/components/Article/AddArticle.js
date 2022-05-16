@@ -7,16 +7,26 @@ import { Timestamp, collection, addDoc } from "firebase/firestore"
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage"
 import { storage, db } from "../../firebase/firebase.utils"
 import { toast } from "react-toastify";
-// import { Link, Navigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useUserAuth } from '../../context/UserAuthContext'
+// import rehypeSanitize from "rehype-sanitize";
+// import MDEditor from "@uiw/react-md-editor";
+import { makeStyles } from "@material-ui/styles";
 
-
-
+const useStyles = makeStyles({
+  input: {
+    color: "white"
+  }
+});
 export default function AddArticle() {
+  const classes = useStyles();
 
-  const { user } = useUserAuth()
+  // const [value, setValue] = useState("Write a Post");
 
 
+  const { user } = useUserAuth();
+
+  const navigate = useNavigate()
 
 
   const [formData, setFormData] = useState({
@@ -82,7 +92,7 @@ export default function AddArticle() {
             .then(() => {
 
               toast("Article added successfully", { type: "success" });
-
+              navigate("/feed")
 
             })
             .catch((err) => {
@@ -99,6 +109,7 @@ export default function AddArticle() {
 
   }
   return (
+
     <Fragment>
       <Box>
         <Container maxWidth="xl" style={{ color: "white" }}>
@@ -114,10 +125,16 @@ export default function AddArticle() {
             justifyContent="center"
 
           >
+            {/* <div>
+              <MDEditor height={200} value={value} onChange={setValue} previewOptions={{
+                rehypePlugins: [[rehypeSanitize]],
+              }} />
+              <MDEditor.Markdown source={value} style={{ padding: 15 }} rehypePlugins={[[rehypeSanitize]]}  />
+            </div> */}
             <TextField
               id="outlined-basic"
               label="Title"
-
+              inputProps={{ className: classes.input }}
               focused
               variant="outlined"
               name="title"
@@ -127,9 +144,9 @@ export default function AddArticle() {
 
             <br /> <br /> <br />
             <TextField
-
+              inputProps={{ className: classes.input }}
               id="standard-textarea"
-              label="Multiline Placeholder"
+              label="Description"
               placeholder="Placeholder"
               multiline
               variant="standard"
@@ -171,7 +188,8 @@ export default function AddArticle() {
           </Stack>
         </Container>
       </Box>
-    </Fragment >
+    </Fragment>
+
 
 
 

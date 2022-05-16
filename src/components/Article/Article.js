@@ -17,12 +17,12 @@ export default function Article() {
 
 
   return (
-    <div>
+    <div style={{ color: "white", margin: "auto", align: "center", fontSize: "10px", fontWeight: "small" }}>
       {article && (
-        <div>
-          <h1>{article.title}</h1>
-          <img src={article.thumbnail} alt="" style={{ height: "200px", width: "500px" }} />
-          <h1>Author:{article.createdBy}</h1>
+        <div >
+          <h1 style={{ fontSize: "30px" }}>{article.title}</h1>
+          <img src={article.thumbnail} alt="" style={{ height: "100%", width: "50%" }} />
+          <h1>Author: {article.createdBy}</h1>
 
           <h1>{article.description}</h1>
 

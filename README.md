@@ -3,7 +3,8 @@
 
 </p></a>
 <p align="center">
-  <strong>Taking Developer conversations to the moon 🚀</strong>
+<strong>Open Source blogging platform for developers<strong/> <br>
+ 
 </p>
 <p align="center">
 <!--   <a href="">
@@ -19,14 +20,52 @@
   <span> · </span>
   <a href="">Community</a>
   <span> · </span>
-<!--   <a href="https://github.com/FotieMConstant/dogehouse-docs">Documentation</a> -->
+  <a href="https://github.com/wisdomekpotu/devhouse/blob/main/docs">Documentation</a>
 </h3>
 
 ---
 
+Repo Overview 😎
+This repo contains for source code for the How to Code a Gmail Spaces Clone with React tutorial article on Stream's blog.
+
+Supported functionalities in this clone include:
+
+Sign in using different user accounts
+Creating new spaces with add members functionality
+Navigating chat spaces with the URL
+Browsing spaces
+Pinning spaces
+Joining/Leaving spaces
+
 ## Structure
 
+Steps to Run Locally 🧑‍💻👩‍💻
+Clone this repo:
 
+git clone https://github.com/dillionmegida/stream-spaces
+Install dependencies:
+
+npm install
+
+## or
+
+yarn
+Add the API key of your Stream app to src/views/SpacesPage, line 13
+
+Start server:
+
+npm run start
+Your Gmail Spaces clone will be live on localhost:3000 and you can begin experimenting the functionalities or adding yours 😁
+
+Kindly leave a star on the React Chat SDK if you enjoyed the result of the tutorial :)
+
+## Features
+
+Requirements 🛠
+Register and create a Stream app (you can call stream-spaces or whatever you want)
+Install Node v16.13.1 (16.13.1 is the version used for this project)
+
+## Installation
 
 ## Branches
 
@@ -36,6 +75,8 @@
 ## Contributions
 
 DevHouse is open to contributions, but I recommend creating an issue or replying in a comment to let me know what you are working on first that way we don't overwrite each other.
+
+## How to Contribute
 
 Please read [CONTRIBUTING.md](https://github.com/wisdomekpotu/devhouse/blob/main/CONTRIBUTING.md) for details on this project.
 
@@ -58,4 +99,3 @@ Feel free to [open an issue](https://github.com/wisdomekpotu/devhouse/issues) on
 ## 📜 License
 
 This software is open source, licensed under the [MIT License](https://github.com/wisdomekpotu/devhouse/blob/main/LICENSE).
-

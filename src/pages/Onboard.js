@@ -10,7 +10,7 @@ import logo from "../components/Navbar/logo.png"
 import google from "../pages/google.png"
 import github from "../pages/github.png"
 import twitter from "../pages/twitter.png"
-
+import facebook from "../pages/facebook.png"
 
 
 
@@ -37,7 +37,7 @@ export default function Onboard() {
     e.preventDefault()
     try {
       await githubSignIn();
-      navigate("/")
+      navigate("/feed")
     } catch (err) {
       setError(err.message)
       console.log(error)
@@ -48,7 +48,7 @@ export default function Onboard() {
     e.preventDefault()
     try {
       await twitterSignIn();
-      navigate("/")
+      navigate("/feed")
     } catch (err) {
       setError(err.message)
       console.log(error)
@@ -59,7 +59,7 @@ export default function Onboard() {
     e.preventDefault()
     try {
       await facebookSignIn();
-      navigate("/")
+      navigate("/feed")
     } catch (err) {
       setError(err.message)
       console.log(error)
@@ -110,7 +110,7 @@ export default function Onboard() {
             <Button onClick={handleTwitterSignIn} variant="contained" style={{ backgroundColor: "white", textTransform: "capitalize", color: "black" }}><img src={twitter} alt="googleicon" style={{ height: "15px", width: "15px" }} />&nbsp;Twitter</Button>
 
 
-            <Button onClick={handleFacebookSignIn} variant="contained" style={{ backgroundColor: "#4267B2", textTransform: "capitalize" }}>Facebook</Button>
+            <Button onClick={handleFacebookSignIn} variant="contained" style={{ backgroundColor: "white", textTransform: "capitalize", color: "black" }}><img src={facebook} alt="googleicon" style={{ height: "15px", width: "15px" }} />&nbsp;Facebook</Button>
           </Stack>
 
           {/* <Stack

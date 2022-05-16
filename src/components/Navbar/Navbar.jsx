@@ -20,51 +20,23 @@ import WbSunnyIcon from '@mui/icons-material/WbSunny';
 // import Sidebar from "../Sidebar/Sidebar"
 import Badge from '@mui/material/Badge';
 import logo from "./logo.png"
-
-
-// import Fab from '@mui/material/Fab';
-// import EditIcon from '@mui/icons-material/Edit';
-// import { color } from '@mui/system';
 import ProfilePopover from '../ProfilePopover/ProfilePopover';
 import NotifyPopover from  '../NotifyPopover/NotifyPopover';
-
-// const pages = ['Articles', 'Communities', 'Blog'];
-// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
-
 import { useUserAuth } from '../../context/UserAuthContext'
 
 
-
-
-
 const Navbar = () => {
-
-
 const {user} = useUserAuth()
-
-
-
-
-
-
-
-
-
-
   const [setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
+
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
-
-  // const handleCloseNavMenu = () => {
-  //   setAnchorElNav(null);
-  // };
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
@@ -73,10 +45,6 @@ const {user} = useUserAuth()
   return (
     <React.Fragment>
     <AppBar>
-      {/* <Alert style={{backgroundColor:"#10B981", color:"white" 
-      , fontSize:"14px" }}> 
-     ✨Welcome to the Official Launch of DevHouse HQ⚡🎉    
-      </Alert> */}
       <Container maxWidth="false" className="bar">
         <Toolbar disableGutters>
         <Link to="/" style={{color:"white",fontWeight:"bold", textDecoration:"none"}}> <Typography 
@@ -86,38 +54,20 @@ const {user} = useUserAuth()
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           > 
        <img src={logo}  style={{height:"30px", width:"30px" }} alt='logo'/>&nbsp;devhouse 
-        
           </Typography> 
-          </Link> 
+        </Link> 
 
 
           {/* hambuger icon */}
-          <Box sx={{ flexGrow: -1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon/>
-            </IconButton>
-          </Box>
+       
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 8, display: { xs: 'flex', md: 'none'  } }}
           >
-          
           <img src={logo}  style={{height:"30px", width:"30px" }} alt='logo'/>&nbsp;devhouse
-       
-      
           </Typography>
-         
-
-
           <Box sx={{ flexGrow: 2, display: { xs: 'none', md: 'flex' } }}>
           
         {/* <Button sx={{ my: 2, color: 'white', display: 'block' }}> Explore</Button>
