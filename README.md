@@ -22,56 +22,54 @@
   <a href="https://github.com/wisdomekpotu/devhouse/blob/main/docs">Documentation</a>
 </h3>
 
----
+## Tech Stack
 
-Repo Overview 😎
-This repo contains for source code for the How to Code a Gmail Spaces Clone with React tutorial article on Stream's blog.
+|       Tech            |      Description          |
+| :-------------------- | :-----------------------: |
+| React 18              |      Frontend             |
+| Firebase              |      Backend(Database/Auth)              |
+| Material UI           | Styling    |
+| Context Api           |   State Management|
+| Netlify               |   Hosting     |
 
-Supported functionalities in this clone include:
 
-Sign in using different user accounts
-Creating new spaces with add members functionality
-Navigating chat spaces with the URL
-Browsing spaces
-Pinning spaces
-Joining/Leaving spaces
 
-## Structure
 
-Steps to Run Locally 🧑‍💻👩‍💻
-Clone this repo:
 
-git clone https://github.com/dillionmegida/stream-spaces
-Install dependencies:
+## 🔰Features
 
-npm install
+- User Login/Signup (Social Logins)
+- Articles Feed
+- Create, Read , Delete and Update of Articles
+- User Personal Dashboards
 
-## or
+### Coming Soon (in progress)
+- Editor with Markdown Support (Coming Soon!)
+- Comments (github discussions)
+- Likes Feature
 
-yarn
-Add the API key of your Stream app to src/views/SpacesPage, line 13
-
-Start server:
-
-npm run start
-Your Gmail Spaces clone will be live on localhost:3000 and you can begin experimenting the functionalities or adding yours 😁
-
-Kindly leave a star on the React Chat SDK if you enjoyed the result of the tutorial :)
-
-## Features
-
-Requirements 🛠
-Register and create a Stream app (you can call stream-spaces or whatever you want)
-Install Node v16.13.1 (16.13.1 is the version used for this project)
-
-## Installation
-
-## Branches
+## 🌿Branches
 
 - staging -> pr this branch for everything
 - prod -> don't touch, this is what's running in prod
 
-## Contributions
+
+## How to run locally 🧑‍💻👩‍💻
+
+Check <a href="https://github.com/wisdomekpotu/devhouse/blob/main/CONTRIBUTING.md#quickstart-local-frontend-development">here</a> on how to run locally</a>
+
+## 🐛 Bug Reporting
+
+Feel free to [open an issue](https://github.com/wisdomekpotu/devhouse/issues) on GitHub if you find any bug.
+
+<a id="feature-request"></a>
+
+## ⭐ Feature Request
+
+- Feel free to [Open an issue](https://github.com/wisdomekpotu/devhouse/issues) on GitHub to request any additional features you might need for your use case.
+- Connect with me on [LinkedIn](https://www.linkedin.com/in/wisdom-ekpotu/). I'd love ❤️️ to hear what you think.
+
+## ⚛️ Contributions
 
 DevHouse is open to contributions, but I recommend creating an issue or replying in a comment to let me know what you are working on first that way we don't overwrite each other.
 
@@ -83,18 +81,15 @@ Please read [CONTRIBUTING.md](https://github.com/wisdomekpotu/devhouse/blob/main
 
 Please read [CODE_OF_CONDUCT.md](https://ithub.com/wisdomekpotu/devhouse/blob/main/CODE_OF_CONDUCT.md) for details on our code of conduct.
 
-## How to run locally
+<a id="release-notes"></a>
 
-Check <a href="https://github.com/wisdomekpotu/devhouse/blob/main/CONTRIBUTING.md#quickstart-local-frontend-development">here</a> on how to run locally</a>
+## 📋 Release Notes
 
-## 🐛 Bug Reporting
+Check [here](https://github.com/wisdomekpotu/devhouse/releases) for release notes.
 
-Feel free to [open an issue](https://github.com/wisdomekpotu/devhouse/issues) on GitHub if you find any bug.
-
-## ⭐ Feature Request
-
-- Feel free to [Open an issue](https://github.com/wisdomekpotu/devhouse/issues) on GitHub to request any additional features you might need for your use case.
+<a id="license"></a>
 
 ## 📜 License
 
 This software is open source, licensed under the [MIT License](https://github.com/wisdomekpotu/devhouse/blob/main/LICENSE).
+
