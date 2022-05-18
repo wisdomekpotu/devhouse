@@ -44,6 +44,9 @@
 - User Personal Dashboards
 
 ### Coming Soon (in progress)
+- Animations
+- Side Bar Menu
+- User Public Profile & artilces
 - Editor with Markdown Support 
 - Comments (github discussions)
 - Likes Feature
