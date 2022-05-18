@@ -40,8 +40,7 @@
 
 - User Login/Signup (Social Logins)
 - Articles Feed
-- Comment Feature
-- Create, Read , Delete and Update of Articles
+- Comments Feature (Github Discussions) [Giscus](https://giscus.app/)
 - User Personal Dashboards (Create, Edit, Delete)
 
 ### Coming Soon! (in progress)
