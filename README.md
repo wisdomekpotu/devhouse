@@ -45,6 +45,7 @@
 
 ### Coming Soon (in progress)
 - Animations
+- User Public Profile & artilces
 - Editor with Markdown Support 
 - Comments (github discussions)
 - Likes Feature
