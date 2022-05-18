@@ -42,12 +42,9 @@
 - Articles Feed
 - Comments Feature (Github Discussions) [Giscus](https://giscus.app/)
 - User Personal Dashboards (Create, Edit, Delete)
-
-### Coming Soon! (in progress)
-- Animations
 - Dark mode
-- User Public Profiles
-- Editor with Markdown Support 
+- Public User Profiles
+- Text Editor with Markdown Support 
 - Likes Feature
 
 ## 🌿Branches
