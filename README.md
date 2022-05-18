@@ -38,10 +38,10 @@
 
 ## 🔰Features
 
-- User Login/Signup (Social Logins)
-- Articles Feed
-- Comments Feature (Github Discussions) [Giscus](https://giscus.app/)
-- User Personal Dashboards (Create, Edit, Delete)
+- User Login/Signup (Social Logins) ✅
+- Articles Feed ✅
+- Comments Feature (Github Discussions) [Giscus](https://giscus.app/) ✅
+- User Personal Dashboards (Create, Delete) ✅
 - Dark mode
 - Public User Profiles
 - Text Editor with Markdown Support 
