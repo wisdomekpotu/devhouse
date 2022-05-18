@@ -40,15 +40,15 @@
 
 - User Login/Signup (Social Logins)
 - Articles Feed
+- Comment Feature
 - Create, Read , Delete and Update of Articles
-- User Personal Dashboards
+- User Personal Dashboards (Create, Edit, Delete)
 
-### Coming Soon (in progress)
+### Coming Soon! (in progress)
 - Animations
 - Dark mode
-- User Public Profile & artilces
+- User Public Profiles
 - Editor with Markdown Support 
-- Comments (github discussions)
 - Likes Feature
 
 ## 🌿Branches
