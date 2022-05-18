@@ -45,7 +45,7 @@
 
 ### Coming Soon (in progress)
 - Animations
-- Side Bar Menu
+- Dark mode
 - User Public Profile & artilces
 - Editor with Markdown Support 
 - Comments (github discussions)
