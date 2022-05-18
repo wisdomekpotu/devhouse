@@ -12,7 +12,6 @@ export default function Homepage() {
   return (
     <Fragment>
       <Navbar />
-
       <Hero />
       <br />
       <FeatureCard />

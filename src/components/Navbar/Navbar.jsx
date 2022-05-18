@@ -37,9 +37,13 @@ const {user} = useUserAuth()
 
   return (
     <React.Fragment>
+          
     <AppBar>
+
       <Container maxWidth="false" className="bar">
+ 
         <Toolbar disableGutters>
+    
         <Link to="/" style={{color:"white",fontWeight:"bold", textDecoration:"none"}}> <Typography 
             variant="h6"
             noWrap
@@ -48,11 +52,11 @@ const {user} = useUserAuth()
           > 
        <img src={logo}  style={{height:"30px", width:"30px" }} alt='logo'/>&nbsp;devhouse 
           </Typography> 
+
         </Link> 
 
-
           {/* hambuger icon */}
-       
+    
           <Typography
             variant="h6"
             noWrap
