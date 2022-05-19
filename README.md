@@ -38,17 +38,13 @@
 
 ## 🔰Features
 
-- User Login/Signup (Social Logins)
-- Articles Feed
-- Create, Read , Delete and Update of Articles
-- User Personal Dashboards
-
-### Coming Soon (in progress)
-- Animations
+- User Login/Signup (Social Logins) ✅
+- Articles Feed ✅
+- Comments Feature (Github Discussions) [Giscus](https://giscus.app/) ✅
+- User Personal Dashboards (Create, Delete) ✅
 - Dark mode
-- User Public Profile & artilces
-- Editor with Markdown Support 
-- Comments (github discussions)
+- Public User Profiles
+- Text Editor with Markdown Support 
 - Likes Feature
 
 ## 🌿Branches
