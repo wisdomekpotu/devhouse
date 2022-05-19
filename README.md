@@ -24,34 +24,26 @@
 
 ## Tech Stack
 
-|       Tech            |      Description          |
-| :-------------------- | :-----------------------: |
-| React 18              |      Frontend             |
-| Firebase              |      Backend(Database/Auth)              |
-| Material UI           | Styling    |
-| Context Api           |   State Management|
-| Netlify               |   Hosting     |
-
-
-
-
+| Tech        |      Description       |
+| :---------- | :--------------------: |
+| React 18    |        Frontend        |
+| Firebase    | Backend(Database/Auth) |
+| Material UI |        Styling         |
+| Context Api |    State Management    |
+| Netlify     |        Hosting         |
 
 ## 🔰Features
 
 - User Login/Signup (Social Logins) ✅
+- Text Editor with Markdown Support ✅
 - Articles Feed ✅
 - Comments Feature (Github Discussions) [Giscus](https://giscus.app/) ✅
 - User Personal Dashboards (Create, Delete) ✅
-- Dark mode
-- Public User Profiles
-- Text Editor with Markdown Support 
-- Likes Feature
 
 ## 🌿Branches
 
 - staging -> pr this branch for everything
 - prod -> don't touch, this is what's running in prod
-
 
 ## How to run locally 🧑‍💻👩‍💻
 
@@ -91,4 +83,3 @@ Check [here](https://github.com/wisdomekpotu/devhouse/releases) for release note
 ## 📜 License
 
 This software is open source, licensed under the [MIT License](https://github.com/wisdomekpotu/devhouse/blob/main/LICENSE).
-
