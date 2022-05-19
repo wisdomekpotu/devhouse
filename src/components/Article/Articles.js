@@ -5,14 +5,12 @@ import { db } from "../../firebase/firebase.utils"
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import CardActions from '@mui/material/CardActions';
 import { Link } from 'react-router-dom';
-import ForumIcon from '@mui/icons-material/Forum';
-
-
 
 
 
 export default function Articles() {
   const [articles, setArticles] = useState([]);
+
 
   useEffect(() => {
     const articleRef = collection(db, "Articles");
@@ -56,12 +54,13 @@ export default function Articles() {
             <Card sx={{ maxWidth: 345 }} xs={2} md={4} key={id} style={{ marginRight: "19px", marginBottom: "19px" }}>
               <Link to={`/feed/article/${id}`}>
                 <CardMedia component="img" height="194" image={thumbnail} alt="Paella dish" />
-              </Link>
-
+              </Link>  
+                  
               <CardContent>
                 <Typography fontSize={20} fontWeight="bold" color="black">
                   {title}
                 </Typography>
+
 
               </CardContent>
 
@@ -77,11 +76,9 @@ export default function Articles() {
                 subheader={createdAt.toDate().toDateString()}
                 action={<CardActions disableSpacing style={{ justifyContent: "right" }}>
                   <IconButton aria-label="likes">
-                    <FavoriteIcon /> <span style={{ fontSize: "15px" }}>1</span>
+                    <FavoriteIcon />
                   </IconButton>
-                  <IconButton aria-label="comments">
-                    <ForumIcon /> <span style={{ fontSize: "15px" }}>1</span>
-                  </IconButton>
+                  
                 </CardActions>}
               />
 

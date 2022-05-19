@@ -1,5 +1,5 @@
 
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState ,useCallback} from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Button, Container, Stack, Typography } from '@mui/material';
@@ -9,20 +9,29 @@ import { storage, db } from "../../firebase/firebase.utils"
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom"
 import { useUserAuth } from '../../context/UserAuthContext'
-// import rehypeSanitize from "rehype-sanitize";
-// import MDEditor from "@uiw/react-md-editor";
+import SimpleMdeReact from 'react-simplemde-editor';
 import { makeStyles } from "@material-ui/styles";
+import 'easymde/dist/easymde.min.css';
+
+
 
 const useStyles = makeStyles({
   input: {
     color: "white"
   }
 });
+
 export default function AddArticle() {
+  const [value, setValue] = useState("Tell your story...");
+
+  const onChange = useCallback((value) => {
+    setValue(value);
+    console.log(value)
+  }, []);
+
+
+
   const classes = useStyles();
-
-  // const [value, setValue] = useState("Write a Post");
-
 
   const { user } = useUserAuth();
 
@@ -31,7 +40,6 @@ export default function AddArticle() {
 
   const [formData, setFormData] = useState({
     title: "",
-    description: "",
     image: "",
     createdAt: Timestamp.now().toDate(),
   });
@@ -47,7 +55,7 @@ export default function AddArticle() {
   };
 
   const handlePublish = () => {
-    if (!formData.title || !formData.description || !formData.image) {
+    if (!formData.title || !value || !formData.image) {
       toast("Please fill all the fields", { type: "error" });
       return;
     }
@@ -68,7 +76,7 @@ export default function AddArticle() {
       () => {
         setFormData({
           title: "",
-          description: "",
+          
           image: "",
         });
 
@@ -78,7 +86,7 @@ export default function AddArticle() {
 
           addDoc(articleRef, {
             title: formData.title,
-            description: formData.description,
+            description: value,
             thumbnail: url,
             createdAt: Timestamp.now().toDate(),
             createdBy: user.displayName,
@@ -92,7 +100,7 @@ export default function AddArticle() {
             .then(() => {
 
               toast("Article added successfully", { type: "success" });
-              navigate("/feed")
+              navigate("/dashboard")
 
             })
             .catch((err) => {
@@ -112,7 +120,9 @@ export default function AddArticle() {
 
     <Fragment>
       <Box>
-        <Container maxWidth="xl" style={{ color: "white" }}>
+        <Container maxWidth="xl" style={{color:"white"}}>
+     
+    
           <Typography variant="h5" fontSize={31} marginTop={1} marginBottom={9} color="white" align='center'>
             Create A Post
           </Typography>
@@ -143,7 +153,7 @@ export default function AddArticle() {
             />
 
             <br /> <br /> <br />
-            <TextField
+            {/* <TextField
               inputProps={{ className: classes.input }}
               id="standard-textarea"
               label="Description"
@@ -151,13 +161,12 @@ export default function AddArticle() {
               multiline
               variant="standard"
               name="description"
-
               value={formData.description}
               onChange={(e) => handleChange(e)}
 
-            />
+            /> */}
 
-            <br /> <br /> <br />
+          
             <Button
               variant="contained"
               component="label"
@@ -172,6 +181,11 @@ export default function AddArticle() {
               />
             </Button>
             <span>{formData.image.name}</span>
+
+            {/* Markdown Editor */}
+            <SimpleMdeReact style={{backgroundColor:"white"}} value={value} onChange={onChange} />
+            
+          
 
             <Button
               variant="contained"

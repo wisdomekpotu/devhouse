@@ -1,7 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebase/firebase.utils"
+import { Avatar } from "@mui/material";
+import Comments from "./Comments"
+import Navbar from "../Navbar/Navbar"
+
+
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
+import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism"
+
 
 
 export default function Article() {
@@ -17,17 +27,61 @@ export default function Article() {
 
 
   return (
-    <div style={{ color: "white", margin: "auto", align: "center", fontSize: "10px", fontWeight: "small" }}>
+    <>
+    <Navbar/>
+ 
+    <div style={{ color: "white", margin: "auto",justifyContent: "center", textAlign: "center", fontSize: "10px", fontWeight: "small" , marginTop: "80px",}}>
       {article && (
         <div >
-          <h1 style={{ fontSize: "30px" }}>{article.title}</h1>
-          <img src={article.thumbnail} alt="" style={{ height: "100%", width: "50%" }} />
-          <h1>Author: {article.createdBy}</h1>
+       
+       <h1 style={{ fontSize: "43px", fontWeight:"800" }}>{article.title}</h1>
+            
+          <img src={article.thumbnail} alt="" style={{ height: "100%", width: "70%" }} />
+      
+          <Link to={`/author/${article.createdBy}`}>
+          {/* <h1 style={{align:"center"}}>{article.createdBy}</h1>       <Avatar alt="Remy Sharp" src={article.userImg} style={{align:"center"}}/> */}
+                   
+                  </Link>
 
-          <h1>{article.description}</h1>
+                  <br/>  <br/>
+          <div style={{fontSize:"20px"}}>
+          <ReactMarkdown 
+         
+            children={article.description} 
+            remarkPlugins={[remarkGfm]}
+            components={{
+              code:  Component,
+            }}
+         
+            />
+            </div>
+
+<br/>
+<Comments/>
 
         </div>
       )}
     </div>
+    </>
   )
 }
+
+
+
+const  Component = ({ language, value }) => {
+
+  return (
+    <SyntaxHighlighter
+      language={language ?? null}
+      style={materialDark}
+   
+      wrapLines={true}
+      showLineNumbers
+    >
+      {value ?? ""}
+    </SyntaxHighlighter>
+  );
+  
+};
+
+

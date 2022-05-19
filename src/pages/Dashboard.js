@@ -3,7 +3,7 @@ import { useUserAuth } from '../context/UserAuthContext'
 import Navbar from "../components/Navbar/Navbar"
 import { Stack, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
-
+import DashControl from '../components/DashControl/DashControl'
 
 
 
@@ -11,6 +11,8 @@ import { Link } from 'react-router-dom'
 export default function Dashboard() {
 
   const { user } = useUserAuth()
+
+
   return (
     <>
       <Navbar />
@@ -54,11 +56,9 @@ export default function Dashboard() {
           </Typography>
         </Typography>
 
-
-
       </Stack>
 
-
+<DashControl/>
 
     </>
 

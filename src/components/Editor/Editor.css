@@ -1,0 +1,71 @@
+/*@import '../../../node_modules/easymde/dist/easymde.min.css';*/
+
+.WYSIWYG,
+p {
+  font: 16px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.WYSIWYG button {
+  font: inherit;
+}
+
+.WYSIWYG .cm-header,
+.WYSIWYG h1,
+.WYSIWYG h2,
+.WYSIWYG h3,
+.WYSIWYG h4,
+.WYSIWYG h5,
+.WYSIWYG h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.WYSIWYG .cm-header.cm-header1,
+.WYSIWYG h1,
+h1 {
+  font-size: 32px;
+}
+
+.WYSIWYG .cm-header.cm-header2,
+.WYSIWYG h2,
+h2 {
+  font-size: 28px;
+}
+
+.WYSIWYG .cm-header.cm-header3,
+.WYSIWYG h3,
+h3 {
+  font-size: 22px;
+}
+
+.WYSIWYG .cm-header.cm-header4,
+.WYSIWYG h4,
+h4 {
+  font-size: 18px;
+}
+
+.WYSIWYG .cm-header.cm-header5,
+.WYSIWYG h5,
+h5 {
+  font-size: 14px;
+}
+
+.WYSIWYG .cm-header.cm-header6,
+.WYSIWYG h6,
+h6 {
+  font-size: 12px;
+}
+
+.WYSIWYG .cm-link,
+.WYSIWYG a,
+a {
+  text-decoration: none;
+  color: hsl(324, 59%, 39%);
+}
