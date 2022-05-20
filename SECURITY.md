@@ -2,4 +2,4 @@
 
 ## Reporting a Vulnerability
 
-DM me on https://twitter.com/wisdom_ekpotu
+Send DM me on https://twitter.com/wisdom_ekpotu or Email me at whizfidel@gmail.com
