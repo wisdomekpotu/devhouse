@@ -1,10 +1,9 @@
 .bar {
-  background-color: #05152E;
+  background-color: #05152e;
 }
 
-
-.serch{
+.serch {
   @media screen and (max-width: 511px) {
-  display: none
-}
+    display: none;
+  }
 }

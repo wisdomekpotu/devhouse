@@ -11,6 +11,7 @@ export function UserAuthContextProvider({ children }) {
     return signOut(auth);
   }
 
+  
   function googleSignIn() {
     const googleAuthProvider = new GoogleAuthProvider();
     return signInWithPopup(auth, googleAuthProvider);
@@ -44,7 +45,7 @@ export function UserAuthContextProvider({ children }) {
   }, []);
 
 
-  //will be accessible in application 
+  //Will be accessible in application 
   return (
     <userAuthContext.Provider
       value={{ user, logOut, googleSignIn, githubSignIn, twitterSignIn, facebookSignIn }}
