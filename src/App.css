@@ -1,9 +1,5 @@
-
 body {
-  background-color: #05152E;
-  font-family: Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font: "Manrope";
-  max-width: 1250px;
-
-  margin: auto;
+  background-color: #080a13;
+  font-family: Inter, sans-serif;
+  font: Inter;
 }

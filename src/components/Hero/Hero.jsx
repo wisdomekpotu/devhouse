@@ -4,12 +4,26 @@ import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import { motion } from 'framer-motion'
+import { Avatar } from '@mui/material'
+import avatar1 from '../../assets/avatar1.svg'
+import { Link } from 'react-router-dom'
 
 export default function Hero() {
   return (
     <>
-      <Box sx={{ pt: 8, pb: 6 }} marginTop="50px">
+      <Box sx={{ pt: 8, pb: 6 }} marginTop="15px">
         <Container maxWidth="xl">
+          <Avatar
+            src={avatar1}
+            style={{
+              width: '15%',
+              height: '15%',
+              margin: 'auto',
+              align: 'center',
+              justifySelf: 'center',
+              alignContent: 'center',
+            }}
+          />
           <Typography
             component="h1"
             variant="h2"
@@ -20,7 +34,10 @@ export default function Hero() {
             fontWeight="680"
             gutterBottom
           >
-            <span style={{ color: 'white' }}>
+            <span
+              className="Herotitle"
+              style={{ color: 'white', fontWeight: '800' }}
+            >
               The Open <span style={{ color: 'aqua' }}>Source</span> Blogging
               <br /> Platform for Developers{' '}
             </span>
@@ -29,10 +46,9 @@ export default function Hero() {
           <Typography
             fontSize="23px"
             align="center"
-            color="#8896A3"
-            style={{ fontSize: '16px' }}
+            color="white"
+            fontWeight="200"
           >
-            {' '}
             Taking Developer Conversations To The Moon🚀{' '}
           </Typography>
           <Stack
@@ -41,25 +57,26 @@ export default function Hero() {
             spacing={2}
             justifyContent="center"
           >
-            <Button
-              component={motion.button}
-              whileHover={{
-                scale: 1.2,
-                transition: { duration: 0.3 },
-              }}
-              whileTap={{ scale: 0.9 }}
-              variant="outlined"
-              style={{
-                color: 'black',
-                backgroundColor: 'aqua',
-                textAlign: 'center',
-                fontWeight: 'bold',
-              }}
-              href="/onboard"
-            >
-              {' '}
-              Join the Community - it's free⚡
-            </Button>
+            <Link to="/onboard" style={{ textDecoration: 'none' }}>
+              <Button
+                component={motion.button}
+                whileHover={{
+                  scale: 1.2,
+                  transition: { duration: 0.3 },
+                }}
+                whileTap={{ scale: 0.9 }}
+                variant="outlined"
+                style={{
+                  color: 'black',
+                  backgroundColor: 'aqua',
+                  textAlign: 'center',
+                  fontWeight: 'bold',
+                }}
+              >
+                {' '}
+                Join the Community - it's free⚡
+              </Button>
+            </Link>
           </Stack>
         </Container>
       </Box>

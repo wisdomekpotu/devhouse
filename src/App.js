@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Routes, Route } from "react-router-dom";
-import Homepage from './pages/homepage';
+import Homepage from './pages/homepage/homepage';
 import Onboard from "./pages/onboard"
 import Feed from "./pages/feed"
 import Dashboard from "./pages/dashboard"
