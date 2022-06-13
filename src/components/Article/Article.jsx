@@ -2,15 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.utils';
-// import { Avatar} from '@mui/material'
 import Comments from './Comments';
 import Navbar from '../Navbar/Navbar';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import ImageRenderer from './image_renderer';
-import style from './codestyle.module.css';
 
 export default function Article() {
   const { id } = useParams();

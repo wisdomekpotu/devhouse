@@ -4,8 +4,6 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { motion } from 'framer-motion';
-import { Avatar } from '@mui/material';
-import avatar1 from '../../assets/avatar1.jpeg';
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
