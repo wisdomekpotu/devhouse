@@ -1,24 +1,26 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { doc, onSnapshot } from 'firebase/firestore'
-import { db } from '../../firebase/firebase.utils'
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { doc, onSnapshot } from 'firebase/firestore';
+import { db } from '../../firebase/firebase.utils';
 // import { Avatar} from '@mui/material'
-import Comments from './Comments'
-import Navbar from '../Navbar/Navbar'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import Comments from './Comments';
+import Navbar from '../Navbar/Navbar';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import ImageRenderer from './image_renderer';
+import style from './codestyle.module.css';
 
 export default function Article() {
-  const { id } = useParams()
-  const [article, setArticle] = useState(null)
+  const { id } = useParams();
+  const [article, setArticle] = useState(null);
   useEffect(() => {
-    const docRef = doc(db, 'Articles', id)
+    const docRef = doc(db, 'Articles', id);
     onSnapshot(docRef, (snapshot) => {
-      setArticle({ ...snapshot.data(), id: snapshot.id })
-    })
-  }, [id])
+      setArticle({ ...snapshot.data(), id: snapshot.id });
+    });
+  }, [id]);
 
   return (
     <>
@@ -32,6 +34,7 @@ export default function Article() {
           fontSize: '10px',
           fontWeight: 'small',
           marginTop: '80px',
+          width: '70%',
         }}
       >
         {article && (
@@ -41,7 +44,7 @@ export default function Article() {
             </h1>
             <img
               src={article.thumbnail}
-              alt=""
+              alt=''
               style={{ height: '100%', width: '70%' }}
             />
             <br />
@@ -58,12 +61,35 @@ export default function Article() {
               </Link> */}
             </div>
             <br /> <br />
-            <div style={{ fontSize: '20px' }}>
+            <div
+              style={{
+                fontSize: '18px',
+
+                textAlign: 'justify',
+              }}
+            >
               <ReactMarkdown
+                renderers={{ image: ImageRenderer }}
                 children={article.description}
-                remarkPlugins={[remarkGfm]}
                 components={{
-                  code: Component,
+                  code({ node, inline, className, children, ...props }) {
+                    const match = /language-(\w+)/.exec(className || '');
+                    return !inline && match ? (
+                      <SyntaxHighlighter
+                        children={String(children).replace(/\n$/, '')}
+                        style={dark}
+                        showLineNumbers={true}
+                        wrapLines={true}
+                        language={match[1]}
+                        PreTag='div'
+                        {...props}
+                      />
+                    ) : (
+                      <code className={className} {...props}>
+                        {children}
+                      </code>
+                    );
+                  },
                 }}
               />
             </div>
@@ -73,18 +99,5 @@ export default function Article() {
         )}
       </div>
     </>
-  )
-}
-
-const Component = ({ language, value }) => {
-  return (
-    <SyntaxHighlighter
-      language={language ?? null}
-      style={materialDark}
-      wrapLines={true}
-      showLineNumbers
-    >
-      {value ?? ''}
-    </SyntaxHighlighter>
-  )
+  );
 }

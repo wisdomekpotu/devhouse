@@ -1,41 +1,30 @@
-import Button from '@mui/material/Button'
-import Stack from '@mui/material/Stack'
-import Typography from '@mui/material/Typography'
-import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
-import { motion } from 'framer-motion'
-import { Avatar } from '@mui/material'
-import avatar1 from '../../assets/avatar1.svg'
-import { Link } from 'react-router-dom'
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import { motion } from 'framer-motion';
+import { Avatar } from '@mui/material';
+import avatar1 from '../../assets/avatar1.jpeg';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
     <>
-      <Box sx={{ pt: 8, pb: 6 }} marginTop="15px">
-        <Container maxWidth="xl">
-          <Avatar
-            src={avatar1}
-            style={{
-              width: '15%',
-              height: '15%',
-              margin: 'auto',
-              align: 'center',
-              justifySelf: 'center',
-              alignContent: 'center',
-            }}
-          />
+      <Box sx={{ pt: 8, pb: 6 }}>
+        <Container maxWidth='xl'>
           <Typography
-            component="h1"
-            variant="h2"
-            align="center"
-            color="aqua"
-            className="devhouse"
-            fontSize="64px"
-            fontWeight="680"
+            component='h1'
+            variant='h2'
+            align='center'
+            color='aqua'
+            className='devhouse'
+            fontSize='64px'
+            fontWeight='680'
             gutterBottom
           >
             <span
-              className="Herotitle"
+              className='Herotitle'
               style={{ color: 'white', fontWeight: '800' }}
             >
               The Open <span style={{ color: 'aqua' }}>Source</span> Blogging
@@ -44,20 +33,20 @@ export default function Hero() {
           </Typography>
 
           <Typography
-            fontSize="23px"
-            align="center"
-            color="white"
-            fontWeight="200"
+            fontSize='23px'
+            align='center'
+            color='white'
+            fontWeight='200'
           >
             Taking Developer Conversations To The Moon🚀{' '}
           </Typography>
           <Stack
             sx={{ pt: 4 }}
-            direction="row"
+            direction='row'
             spacing={2}
-            justifyContent="center"
+            justifyContent='center'
           >
-            <Link to="/onboard" style={{ textDecoration: 'none' }}>
+            <Link to='/onboard' style={{ textDecoration: 'none' }}>
               <Button
                 component={motion.button}
                 whileHover={{
@@ -65,7 +54,7 @@ export default function Hero() {
                   transition: { duration: 0.3 },
                 }}
                 whileTap={{ scale: 0.9 }}
-                variant="outlined"
+                variant='outlined'
                 style={{
                   color: 'black',
                   backgroundColor: 'aqua',
@@ -81,5 +70,5 @@ export default function Hero() {
         </Container>
       </Box>
     </>
-  )
+  );
 }
