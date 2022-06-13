@@ -7,31 +7,31 @@ import {
   Grid,
   IconButton,
   Typography,
-} from '@mui/material'
-import { collection, onSnapshot, orderBy, query } from 'firebase/firestore'
-import React, { useEffect, useState } from 'react'
-import { db } from '../../firebase/firebase.utils'
-import FavoriteIcon from '@mui/icons-material/Favorite'
-import CardActions from '@mui/material/CardActions'
-import { Link } from 'react-router-dom'
+} from '@mui/material';
+import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
+import React, { useEffect, useState } from 'react';
+import { db } from '../../firebase/firebase.utils';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import CardActions from '@mui/material/CardActions';
+import { Link } from 'react-router-dom';
 
 export default function Articles() {
-  const [articles, setArticles] = useState([])
+  const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    const articleRef = collection(db, 'Articles')
-    const q = query(articleRef, orderBy('createdAt', 'desc'))
+    const articleRef = collection(db, 'Articles');
+    const q = query(articleRef, orderBy('createdAt', 'desc'));
     onSnapshot(q, (snapshot) => {
-      console.log(onSnapshot)
+      console.log(onSnapshot);
       const articles = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
-      }))
+      }));
 
-      setArticles(articles)
-      console.log(articles)
-    })
-  }, [])
+      setArticles(articles);
+      console.log(articles);
+    });
+  }, []);
 
   return (
     <>
@@ -65,24 +65,27 @@ export default function Articles() {
               >
                 <Link to={`/feed/article/${id}`}>
                   <CardMedia
-                    component="img"
-                    height="194"
+                    component='img'
+                    height='194'
                     image={thumbnail}
-                    alt="Paella dish"
+                    alt='Paella dish'
                   />
                 </Link>
-
-                <CardContent>
-                  <Typography fontSize={20} fontWeight="bold" color="black">
-                    {title}
-                  </Typography>
-                </CardContent>
-
+                <Link
+                  to={`/feed/article/${id}`}
+                  style={{ textDecoration: 'none' }}
+                >
+                  <CardContent>
+                    <Typography fontSize={20} fontWeight='bold' color='black'>
+                      {title}
+                    </Typography>
+                  </CardContent>
+                </Link>
                 <CardHeader
                   style={{}}
                   avatar={
                     <Link to={`/author/${createdBy}`}>
-                      <Avatar alt="Remy Sharp" src={userImg} />
+                      <Avatar alt='Remy Sharp' src={userImg} />
                     </Link>
                   }
                   title={createdBy}
@@ -92,7 +95,7 @@ export default function Articles() {
                       disableSpacing
                       style={{ justifyContent: 'right' }}
                     >
-                      <IconButton aria-label="likes">
+                      <IconButton aria-label='likes'>
                         <FavoriteIcon />
                       </IconButton>
                     </CardActions>
@@ -104,5 +107,5 @@ export default function Articles() {
         )}
       </Grid>
     </>
-  )
+  );
 }
