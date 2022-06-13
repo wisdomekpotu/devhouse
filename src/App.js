@@ -11,7 +11,6 @@ import Write from './pages/write';
 import NotFound from "./pages/notfound"
 import Article from "./components/Article/Article"
 import { useUserAuth } from './context/UserAuthContext'
-import Footer from './components/Footer/Footer';
 
 
 
