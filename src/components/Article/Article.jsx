@@ -31,7 +31,7 @@ export default function Article() {
           fontSize: '10px',
           fontWeight: 'small',
           marginTop: '80px',
-          width: '70%',
+          width: '50%',
         }}
       >
         {article && (

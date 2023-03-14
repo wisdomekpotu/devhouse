@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 export default function Hero() {
   return (
     <>
-      <Box sx={{ pt: 8, pb: 6 }}>
+      <Box sx={{ pt: 20, pb: 6 }}>
         <Container maxWidth='xl'>
           <Typography
             component='h1'
